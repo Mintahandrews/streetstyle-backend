@@ -1,17 +1,21 @@
 {
-  "build": {
-    "nixpacksPlan": {
-      "providers": ["nodejs"],
-      "phases": {
-        "build": {
-          "cmds": [
-            "npm install"
-          ]
-        },
-        "start": {
-          "cmd": "medusa start"
-        }
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "nixpacks",
+      "config": {
+        "providers": ["nodejs"]
       }
     }
-  }
+  ],
+  "routes": [
+    {
+      "handle": "files",
+      "src": "/files"
+    },
+    {
+      "src": "/.*",
+      "dest": "/"
+    }
+  ]
 }
