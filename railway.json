@@ -1,0 +1,17 @@
+{
+  "build": {
+    "nixpacksPlan": {
+      "providers": ["nodejs"],
+      "phases": {
+        "build": {
+          "cmds": [
+            "npm install"
+          ]
+        },
+        "start": {
+          "cmd": "medusa start"
+        }
+      }
+    }
+  }
+}
