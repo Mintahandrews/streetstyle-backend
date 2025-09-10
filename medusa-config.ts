@@ -13,7 +13,14 @@ module.exports = defineConfig({
       jwtSecret: process.env.JWT_SECRET || "supersecret",
     },
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: `medusa-plugin-postgresql`,
+      options: {
+        connection_string: process.env.DATABASE_URL,
+      },
+    }
+  ],
   admin: {
     disable: true
   }
