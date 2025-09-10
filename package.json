@@ -13,7 +13,7 @@
     "medusa"
   ],
   "scripts": {
-    "predeploy": "rm -rf node_modules package-lock.json && npm ci && npm run build",
+    "predeploy": "rm -rf node_modules package-lock.json && npm install vite@5.4.20 --legacy-peer-deps && npm install --legacy-peer-deps && npm run build",
     "clean": "npm cache clean --force && rm -rf node_modules package-lock.json",
     "build": "medusa build",
     "seed": "medusa exec ./src/scripts/seed.ts",
