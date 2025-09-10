@@ -1,4 +1,4 @@
-import { loadEnv, defineConfig } from '@medusajs/medusa/dist/utils'
+import { loadEnv, defineConfig } from '@medusajs/medusa/utils'
 
 loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
