@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "predeploy": "npm run build",
-    "build": "node --max-old-space-size=4096 .medusa/server/build/index.js",
+    "build": "medusa build",
     "seed": "medusa exec ./src/scripts/seed.ts",
     "start": "medusa start",
     "dev": "medusa develop",
