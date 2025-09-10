@@ -17,5 +17,6 @@
       "src": "/.*",
       "dest": "/"
     }
-  ]
+  ],
+  "healthcheckPath": "/health"
 }
