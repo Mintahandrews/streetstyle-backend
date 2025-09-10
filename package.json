@@ -13,7 +13,7 @@
     "medusa"
   ],
   "scripts": {
-    "predeploy": "npm run clean && npm run build",
+    "predeploy": "npm install --legacy-peer-deps && npm run build",
     "clean": "npm cache clean --force && rm -rf node_modules package-lock.json",
     "build": "medusa build",
     "seed": "medusa exec ./src/scripts/seed.ts",
